@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ludo</title>
+        <link rel="stylesheet" href="ludo.css">
+        <script src="ludo.js" defer type="module"></script>
+</head>
+<body>
+    <!-- Everything is placed inside a div named Parent-Grid with a grid display inorder to accurately switch between mobile and desktop layouts -->
+    <div id="parent-grid">
+        
+        <!-- The section of the layout having the player's console inside (most importantly the dice) -->
+        <div id="dice-section">
+
+            <!-- The Dice-Container which is also supposed to act as a console for all players to see various statistics of the game -->
+            <div id="dice-container">
+
+                <!-- The variable image component which acts as a dice; The source image is changed after every roll to match the outcome -->
+                <img src="./images/1.jpg" alt="dice" id="dice">
+
+                <!-- A container for showing the steps that the player can move -->
+                <div id="display"></div>
+
+            </div>
+
+        </div>
+        
+        <!-- The section of the layout that contains the board -->
+        <div id="board-section">
+
+            <!-- The Board -->
+            <div id="board"></div>
+
+        </div>
+        
+    </div>
+</body>
+</html>

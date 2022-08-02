@@ -1,0 +1,102 @@
+:root{
+    --edge: 90vmin;
+    --no-border: 5px solid transparent;
+    --turn-border: 5px solid black
+}
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+#parent-grid{
+    margin-top: 5vmin;
+    height: 90vmin;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+#dice-container{
+    background-color: dodgerblue;
+    height: 95%;
+    width: 90%;
+    margin: auto;
+    margin-top: 1%;
+    border-radius: 5vmin;
+    border: 5px solid blue;
+}
+
+@media (max-width: 822px){
+    #parent-grid{
+        height: 125vmin;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr 1fr;
+    }
+    #board-section{
+        order: 1;
+    }
+    #dice-section{
+        order: 2;
+    }
+}
+
+#dice{
+    display: block;
+    height: 12vmin;
+    width: 12vmin;
+    margin: auto;
+    position: relative;
+    top: 5vmin;
+    border-radius: 13%;
+}
+
+.step{
+    height: 5vmin;
+    width: 5vmin;
+    border-radius: 11%;
+    margin: 0vmin 0.5vmin;
+}
+
+#display{
+    position: relative;
+    top: 6vmin;
+    height: 5vmin;
+    width: max-content;
+    margin: auto;
+}
+#board{
+    border: 1px solid grey;
+    background-image: url('./images/Board.jpg');
+    background-size: cover;
+    display: grid;
+    margin: auto;
+    height: var(--edge);
+    width: var(--edge);
+    grid-template-columns: repeat(15,1fr);
+    grid-template-rows: repeat(15,1fr);
+}
+.square{
+    height: 6vmin;
+    width: 6vmin;
+    background-color: rgb(0,0,255,0.5);
+}
+.piece{
+    height: 6vmin;
+    width: 6vmin;
+    border-radius: 50%;
+    border: 1px solid black;
+    position: relative;
+    display: inline-block;
+}
+.home{
+    position: relative;
+    border: var(--no-border);
+    height: 36vmin;
+    width: 36vmin;
+    display: flex;
+}
+.innerHome{
+    position: relative;
+    height: 16vmin;
+    width: 16.8vmin;
+    margin: auto;
+}
