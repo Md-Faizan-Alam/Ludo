@@ -240,18 +240,21 @@ class Player {
     }
 }
 
-let playerList = localStorage.getItem('players');
-console.log('Player List: '+playerList);
-
-if(playerList == null){
-    playerList = [];
-    for (let i = 0; i < 4; i++) {
-        playerList.push(new Player(i));
-    }
-}else{
-    Piece.pieceList = localStorage.getItem('pieces');
+let playerList = [];
+for (let i = 0; i < 4; i++) {
+    playerList.push(new Player(i));
 }
 
+// let playerList = localStorage.getItem('players');
+
+// if(playerList == null){
+//     playerList = [];
+//     for (let i = 0; i < 4; i++) {
+//         playerList.push(new Player(i));
+//     }
+// }else{
+//     Piece.pieceList = localStorage.getItem('pieces');
+// }
 
 // Piece.pieceList[0].moveOut();
 // Piece.pieceList[1].moveOut();
@@ -260,11 +263,11 @@ if(playerList == null){
 // Piece.pieceList[5].moveOut();
 // Piece.pieceList[4].moveTo(16);
 
-setInterval(() => {
-    console.log('Game Saved')
-    localStorage.setItem('players',playerList);
-    localStorage.setItem('pieces',Piece.pieceList);
-}, 10000);
+// setInterval(() => {
+//     console.log('Game Saved')
+//     localStorage.setItem('players',playerList);
+//     localStorage.setItem('pieces',Piece.pieceList);
+// }, 10000);
 
 
 homeList[Player.currentPlayer].style.border = 'var(--turn-border)';
